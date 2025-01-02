@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linktree</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+        ::selection {
+    background: rgb(37, 34, 34);
+    color: white; /* Opcional: para alterar a cor do texto selecionado */
+}
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        .cursor {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        pointer-events: none;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+    }
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 400px;
+            color: #fff;
+            width: 100%;
+            background: rgb(204 191 166);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+      
+
+
+        .profile {
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            height: 200px;
+            margin-bottom: 10px;
+        }
+
+        .profile h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .links a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            text-decoration: none;
+            background: #2e2f33;
+            color: white;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .links a:hover {
+            background: #0e0e0f;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #ffffff;
+        }  @media (max-width: 768px) {
+            .container {
+                max-width: 300px;
+                padding: 15px;
+            }
+            .profile img {
+            height: 100px;
+           
+        } }
+    </style>
+</head>
+<body>
+    <video class="background-video" autoplay muted loop>
+        <source src="gg.webm" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <div class="profile">
+            <img src="gg.png" alt="Profile Picture">
+            <h1>GGHANDMADE</h1>
+            <p>Pinturas, Amigurumis e Cerâmica <br>
+                🏷️ | Agenda aberta em breve…<br>
+                🏷️ | Desde 2021</p>
+        </div>
+
+        <div class="links">
+            <a href="https://www.instagram.com/_gghandmade/" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com/glmhandmade33/" target="_blank">Facebook</a>
+            <a href="https://wa.me/5519996328096" target="_blank">WhatsApp</a>
+        </div>
+
+        <footer>
+            &copy; 2025 GGHANDMADE
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const cursor = document.createElement('div');
+                cursor.classList.add('cursor');
+                document.body.appendChild(cursor);
+        
+                document.addEventListener('mousemove', (e) => {
+                    cursor.style.left = `${e.pageX}px`;
+                    cursor.style.top = `${e.pageY}px`;
+                });
+            });
+        </script>
+    </div>
+</body>
+</html>
